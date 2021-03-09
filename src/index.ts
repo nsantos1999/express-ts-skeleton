@@ -1,11 +1,14 @@
-import express from "express";
+import express from 'express'
+import routes from '@routes/index'
 
-const app = express();
+const app = express()
 
-app.get("/", (_, res) => {
-  return res.send("Hello World");
-});
+app.use(routes)
+
+app.get('/', (_, res) => {
+  return res.send('Hello World')
+})
 
 app.listen(3000, () => {
-  console.log("Server started!! ");
-});
+  console.log('Server started!!')
+})
